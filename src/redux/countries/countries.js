@@ -1,10 +1,11 @@
 /* eslint-disable no-case-declarations */
 const URL = 'https://covid-api.mmediagroup.fr/v1/cases/?continent=Europe';
-const LOAD_COUNTRIES = 'countries/loaded';
-const FETCHING_COUNTRIES_FAILED = 'countries/fetchingFailed';
+const LOAD_COUNTRIES = 'COUNTRIES/LOADED';
+const FETCHING_COUNTRIES_FAILED = 'COUNTRIES/FETCHING_COUNTRIES_FAILED';
 
 const initialState = {
   countries: [],
+  totalConfirmed: 0,
   error: '',
 };
 
@@ -26,12 +27,12 @@ export const fetchCountries = async (dispatch) => {
       country,
       ...v,
     }));
-    console.log(countries);
+
+    countries.sort((a, b) => b.All.confirmed - a.All.confirmed);
 
     dispatch(
       loadCountries(
-        countries.map((country, index) => ({
-          id: index,
+        countries.map((country) => ({
           country: country.country,
           cases: country.All.confirmed,
         })),
@@ -49,6 +50,8 @@ const reducer = (state = initialState, action) => {
       return {
         ...state,
         countries: action.payload,
+        totalConfirmed: action.payload.map((item) => item.cases)
+          .reduce((prev, curr) => prev + curr, 0),
       };
     case FETCHING_COUNTRIES_FAILED:
       return {

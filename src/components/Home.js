@@ -1,11 +1,10 @@
 import React, { useEffect } from 'react';
 import { useSelector, useDispatch } from 'react-redux';
-import { fetchCountries } from '../redux/home/home';
+import { fetchCountries } from '../redux/countries/countries';
 
 const Home = () => {
   const dispatch = useDispatch();
   const countries = useSelector((state) => state);
-  console.log(countries);
 
   useEffect(() => {
     if (!countries.length) {
