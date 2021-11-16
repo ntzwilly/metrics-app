@@ -1,7 +1,7 @@
 /* eslint-disable no-case-declarations */
 const URL = 'https://covid-api.mmediagroup.fr/v1/cases/?continent=Europe';
-const LOAD_COUNTRIES = 'COUNTRIES/LOADED';
-const FETCHING_COUNTRIES_FAILED = 'COUNTRIES/FETCHING_COUNTRIES_FAILED';
+const LOAD_COUNTRIES = 'countries/loaded';
+const FETCHING_COUNTRIES_FAILED = 'countries/fetchingFailed';
 
 const initialState = {
   countries: [],

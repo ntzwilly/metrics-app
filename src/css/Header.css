@@ -1,0 +1,55 @@
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px;
+}
+
+.right-icons {
+  display: flex;
+}
+
+.right-icons {
+  width: 70px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 1.3rem;
+}
+
+.link {
+  font-size: 1.3rem;
+}
+
+.link:visited,
+.link:hover,
+.link:active {
+  color: inherit;
+}
+
+.middle-text {
+  font-weight: 300;
+  font-size: 1.2rem;
+}
+
+.europe-img {
+  width: 100%;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  
+}
+
+.top-section {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  align-items: center;
+  background-color: rgb(86, 135, 227);
+}
+
+.europe-txt {
+  padding-left: 20px;
+}
+
+.lists-title {
+  padding: 6px;
+}
