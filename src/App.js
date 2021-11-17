@@ -11,10 +11,10 @@ function App() {
     <Provider store={store}>
       <Router>
         <Switch>
-          <Route path="/home">
+          <Route exact path="/">
             <Home />
           </Route>
-          <Route path="/details">
+          <Route path="/countries">
             <Details />
           </Route>
         </Switch>

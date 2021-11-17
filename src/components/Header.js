@@ -8,7 +8,7 @@ import '../css/Header.css';
 const Header = () => (
   <div className="header">
     <div>
-      <Link className="link" to="/details">
+      <Link className="link" to="/Home">
         <FiChevronLeft />
       </Link>
     </div>

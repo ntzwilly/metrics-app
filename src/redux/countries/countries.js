@@ -32,7 +32,8 @@ export const fetchCountries = async (dispatch) => {
 
     dispatch(
       loadCountries(
-        countries.map((country) => ({
+        countries.map((country, index) => ({
+          id: index,
           country: country.country,
           cases: country.All.confirmed,
         })),
