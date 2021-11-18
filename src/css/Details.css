@@ -1,0 +1,46 @@
+.region {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-left: 10px;
+  padding-right: 10px;
+  height: 4.5rem;
+}
+
+.regions-list li:nth-child(even) {
+  background: #3f62a4;
+}
+
+.statistics {
+  width: 40%;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+  align-items: center;
+}
+
+.numbers {
+  margin-right: 20px;
+}
+
+.title-h6 {
+  padding: 6px;
+  background-color: #38568d;
+}
+
+.virus-img {
+  height: 150px;
+}
+
+.virus-txt {
+  width: 30%;
+  text-align: right;
+}
+
+.top-section {
+  display: flex;
+  justify-content: space-between;
+  height: 35vh;
+  padding-right: 20px;
+  padding-left: 10%;
+}

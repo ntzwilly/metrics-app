@@ -1,15 +1,21 @@
 /* eslint-disable no-case-declarations */
-const URL = 'https://covid-api.mmediagroup.fr/v1/cases/?continent=Europe';
+const URL = 'https://covid-api.mmediagroup.fr/v1/cases';
 const LOAD_COUNTRIES = 'countries/loaded';
 const FETCHING_COUNTRIES_FAILED = 'countries/fetchingFailed';
+const LOAD_COUNTRY = 'country/loaded';
 
 const initialState = {
   countries: [],
   totalConfirmed: 0,
-  error: '',
+  selected: null,
 };
 
-const loadCountries = (countries) => ({
+export const loadCountry = (payload) => ({
+  type: LOAD_COUNTRY,
+  payload,
+});
+
+export const loadCountries = (countries) => ({
   type: LOAD_COUNTRIES,
   payload: countries,
 });
@@ -19,11 +25,17 @@ const fetchingDataFailed = (err) => ({
   payload: err,
 });
 
+export const fetchCountry = (name) => async (dispatch) => {
+  const response = await fetch(`${URL}?country=${name}`);
+  const data = await response.json();
+  dispatch(loadCountry(data));
+};
+
 export const fetchCountries = async (dispatch) => {
   try {
-    const response = await fetch(URL);
-    const missions = await response.json();
-    const countries = Object.entries(missions).map(([country, v]) => ({
+    const response = await fetch(`${URL}?continent=Europe`);
+    const data = await response.json();
+    const countries = Object.entries(data).map(([country, v]) => ({
       country,
       ...v,
     }));
@@ -32,10 +44,10 @@ export const fetchCountries = async (dispatch) => {
 
     dispatch(
       loadCountries(
-        countries.map((country, index) => ({
-          id: index,
+        countries.map((country) => ({
           country: country.country,
           cases: country.All.confirmed,
+          regions: Object.entries(country),
         })),
       ),
     );
@@ -51,13 +63,15 @@ const reducer = (state = initialState, action) => {
       return {
         ...state,
         countries: action.payload,
-        totalConfirmed: action.payload.map((item) => item.cases)
+        totalConfirmed: action.payload
+          .map((item) => item.cases)
           .reduce((prev, curr) => prev + curr, 0),
       };
+    case LOAD_COUNTRY:
+      return { ...state, selected: action.payload };
     case FETCHING_COUNTRIES_FAILED:
       return {
         ...state,
-        loading: false,
         error: action.payload,
       };
     default:

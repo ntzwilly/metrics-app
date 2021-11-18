@@ -14,7 +14,7 @@ function App() {
           <Route exact path="/">
             <Home />
           </Route>
-          <Route path="/countries">
+          <Route path="/countries/:name">
             <Details />
           </Route>
         </Switch>

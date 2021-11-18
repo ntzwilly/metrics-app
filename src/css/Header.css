@@ -3,10 +3,12 @@
   justify-content: space-between;
   align-items: center;
   padding: 10px;
+  background-color: #38568d;
 }
 
-.right-icons {
+.header-left {
   display: flex;
+  align-items: center;
 }
 
 .right-icons {
@@ -32,13 +34,6 @@
   font-size: 1.2rem;
 }
 
-.europe-img {
-  width: 100%;
-  margin-top: 20px;
-  margin-bottom: 20px;
-  
-}
-
 .top-section {
   display: grid;
   grid-template-columns: 1fr 1fr;
@@ -48,8 +43,4 @@
 
 .europe-txt {
   padding-left: 20px;
-}
-
-.lists-title {
-  padding: 6px;
 }
