@@ -4,8 +4,9 @@
 
 > Mobile web application builded with React and Redux.
 
-![home](https://user-images.githubusercontent.com/9049260/142418227-e5946248-2607-4aa6-9022-ed873d08367b.png)
-![details](https://user-images.githubusercontent.com/9049260/142418311-17783d8d-d7b6-4d01-8ff6-344944bca413.png)
+![Home](https://user-images.githubusercontent.com/9049260/142601289-92b5a540-4d08-4e70-b968-9a3d52b4413f.png)
+![Details](https://user-images.githubusercontent.com/9049260/142602210-ce67a2bb-0e38-45ad-bccd-7c0a73ae8a3d.png)
+
 
 This app can be used to check the numeric values of COVID cases in various European countries.
 ## Built With

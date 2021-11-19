@@ -13,7 +13,7 @@ const Header = () => (
       </Link>
     </div>
     <div>
-      <p className="middle-text">most cases</p>
+      <p className="middle-text">town/city cases</p>
     </div>
     <div className="right-icons">
       <div>
