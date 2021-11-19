@@ -35,7 +35,7 @@ Make sure you have these packages installed:
 
 ### Setup
 
-To run code locally, please follow steps below:
+To run the app locally, please follow steps below:
 
 1. Clone the repository with this command: `git clone git@github.com:ntzwilly/metrics-app.git`
 
