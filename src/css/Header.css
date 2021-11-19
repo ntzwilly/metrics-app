@@ -1,0 +1,46 @@
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px;
+  background-color: #38568d;
+}
+
+.header-left {
+  display: flex;
+  align-items: center;
+}
+
+.right-icons {
+  width: 70px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 1.3rem;
+}
+
+.link {
+  font-size: 1.3rem;
+}
+
+.link:visited,
+.link:hover,
+.link:active {
+  color: inherit;
+}
+
+.middle-text {
+  font-weight: 300;
+  font-size: 1.2rem;
+}
+
+.top-section {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  align-items: center;
+  background-color: rgb(86, 135, 227);
+}
+
+.europe-txt {
+  padding-left: 20px;
+}
