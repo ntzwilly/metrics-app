@@ -44,14 +44,6 @@ To run code locally, please follow steps below:
    
 4. Run `npm start`
 
-### Install
-
-    npm install
-
-### Usage
-
-    npm start
-
 ## Author
 
 👤 **Willy Ntazama**
