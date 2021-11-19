@@ -36,10 +36,13 @@ Make sure you have these packages installed:
 
 To run code locally, please follow steps below:
 
-    1. Clone the repository with this command: `git clone git@github.com:ntzwilly/metrics-app.git`
-    2. Change you current directory to metrics-app: `cd metrics-app`
-    3. Run `npm install`
-    4. Run `npm start`
+1. Clone the repository with this command: `git clone git@github.com:ntzwilly/metrics-app.git`
+
+2. Change you current directory to metrics-app: `cd metrics-app`
+ 
+3. Run `npm install`
+   
+4. Run `npm start`
 
 ### Install
 
