@@ -19,9 +19,6 @@ This app can be used to check the numeric values of COVID cases in various Europ
 
 - [Heroku](https://metrics-app-covid.herokuapp.com/)
 
-## Presentation Video
-
-- [Link](https://youtu.be/8kpV2FQUWKQ)
 ## Getting Started
 
 To get a local copy up and running follow these simple example steps.
