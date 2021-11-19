@@ -27,12 +27,19 @@ To get a local copy up and running follow these simple example steps.
 
 ### Prerequisites
 
-    Node >= 14.0.0 and npm >= 5.6
+Make sure you have these packages installed:
+
+   - Node >= 14.0.0 
+   - npm >= 5.6
 
 ### Setup
 
-    1. git@github.com:ntzwilly/metrics-app.git
-    2. cd metrics-app
+To run code locally, please follow steps below:
+
+    1. Clone the repository with this command: `git clone git@github.com:ntzwilly/metrics-app.git`
+    2. Change you current directory to metrics-app: `cd metrics-app`
+    3. Run `npm install`
+    4. Run `npm start`
 
 ### Install
 
@@ -42,7 +49,7 @@ To get a local copy up and running follow these simple example steps.
 
     npm start
 
-## Authors
+## Author
 
 👤 **Willy Ntazama**
 

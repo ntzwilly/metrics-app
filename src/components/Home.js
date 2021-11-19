@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react';
+import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import { FiChevronLeft } from 'react-icons/fi';
 import { HiMicrophone } from 'react-icons/hi';
@@ -13,6 +13,7 @@ import '../css/Home.css';
 const Home = () => {
   const dispatch = useDispatch();
   const countries = useSelector((state) => state.countries);
+  const [searchCountry, setSearchCountry] = useState('');
 
   useEffect(() => {
     if (!countries.length) {
@@ -52,9 +53,16 @@ const Home = () => {
       </div>
       <div className="lists-title">
         <h6>STATS BY COUNTRY</h6>
+        <input type="text" placeholder="Search country" onChange={(event) => { setSearchCountry(event.target.value); }} />
       </div>
       <ul className="countries-list">
-        {countries.countries.map(({ country, cases }) => (
+        {countries.countries.filter((val) => {
+          if (searchCountry === '') {
+            return val;
+          } if (val.country.toLowerCase().includes(searchCountry.toLowerCase())) {
+            return val;
+          } return null;
+        }).map(({ country, cases }) => (
           <Link
             className="link-lists"
             key={country}

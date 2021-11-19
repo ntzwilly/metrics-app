@@ -17,8 +17,16 @@
 }
 
 .lists-title {
-  padding: 6px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-left: 20px;
   background-color: #38568d;
+}
+
+.lists-title input {
+  outline: none;
+  padding: 5px;
 }
 
 .home-div {

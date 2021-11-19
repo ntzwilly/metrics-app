@@ -1,4 +1,3 @@
-/* eslint-disable no-case-declarations */
 const URL = 'https://covid-api.mmediagroup.fr/v1/cases';
 const LOAD_COUNTRIES = 'countries/loaded';
 const FETCHING_COUNTRIES_FAILED = 'countries/fetchingFailed';
